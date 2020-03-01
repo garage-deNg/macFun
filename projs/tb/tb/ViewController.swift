@@ -29,7 +29,7 @@ class ViewController: NSViewController {
         tb.backgroundColor = .clear
         tb.delegate = self
         tb.dataSource = self
-        let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "column"))
+        let column = NSTableColumn(identifier: .column)
         tb.headerView = nil
         column.width = 1
         tb.addTableColumn(column)
@@ -91,7 +91,10 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        guard (tableColumn?.identifier)!.rawValue == column else { fatalError("AdapterTableView identifier not found") }
+        guard tableColumn?.identifier == NSUserInterfaceItemIdentifier.column else {
+            fatalError("AdapterTableView identifier not found")
+            
+        }
         
         let name = items[row].name
         let view = NSTextField(string: name)
