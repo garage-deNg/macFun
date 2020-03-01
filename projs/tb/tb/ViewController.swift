@@ -14,7 +14,7 @@ class ViewController: NSViewController {
     let column = "column"
     let heightOfRow: CGFloat = 26
     
-    fileprivate var items: [User] = [User]() {
+    fileprivate var items: [Poem] = [Poem]() {
         didSet {
             tableView.reloadData()
         }
@@ -42,7 +42,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.frame = NSRect(x: 0, y: 0, width: 200, height: 200)
+        view.frame = NSRect(x: 0, y: 0, width: 400, height: 250)
         let scrollBaseView = NSScrollView()
         // Do any additional setup after loading the view.
         scrollBaseView.documentView = tableView
@@ -60,11 +60,12 @@ class ViewController: NSViewController {
     
     func configureTableView() {
         
-        let users = [User(name: "Alberto"),
-                     User(name: "Felipe"),
-                     User(name: "Aaron"),
-                     User(name: "Laura"),
-                     User(name: "Giuseppe")]
+        let users = ["We are not now that strength which in old days",
+                     "Moved earth and heaven, that which we are, we are;",
+                     "One equal temper of heroic hearts,",
+                     "Made weak by time and fate, but strong in will",
+                     "To strive, to seek, to find, ",
+                     "and not to yield"].map(Poem.init)
         add(items: users)
     }
 
@@ -76,7 +77,7 @@ class ViewController: NSViewController {
 
 
     
-    func add(items: [User]) {
+    func add(items: [Poem]) {
         self.items += items
     }
 }
@@ -92,11 +93,11 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         guard tableColumn?.identifier == NSUserInterfaceItemIdentifier.column else {
-            fatalError("AdapterTableView identifier not found")
+            fatalError("identifier not found")
             
         }
         
-        let name = items[row].name
+        let name = items[row].sentence
         let view = NSTextField(string: name)
         view.isEditable = false
         view.isBordered = false

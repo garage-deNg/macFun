@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct User {
-    let name: String
+struct Poem {
+    let sentence: String
 }

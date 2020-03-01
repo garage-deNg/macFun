@@ -13,7 +13,7 @@
 		2679CE5C240C06FA00BD7F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2679CE5A240C06FA00BD7F78 /* Main.storyboard */; };
 		2679CE68240C06FA00BD7F78 /* tbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2679CE67240C06FA00BD7F78 /* tbTests.swift */; };
 		2679CE73240C06FA00BD7F78 /* tbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2679CE72240C06FA00BD7F78 /* tbUITests.swift */; };
-		2679CE82240C0A5A00BD7F78 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2679CE81240C0A5A00BD7F78 /* User.swift */; };
+		2679CE82240C0A5A00BD7F78 /* Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2679CE81240C0A5A00BD7F78 /* Poem.swift */; };
 		2679CE85240C0C1600BD7F78 /* ForItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2679CE84240C0C1600BD7F78 /* ForItemIdentifier.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		2679CE6E240C06FA00BD7F78 /* tbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2679CE72240C06FA00BD7F78 /* tbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tbUITests.swift; sourceTree = "<group>"; };
 		2679CE74240C06FA00BD7F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2679CE81240C0A5A00BD7F78 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2679CE81240C0A5A00BD7F78 /* Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poem.swift; sourceTree = "<group>"; };
 		2679CE84240C0C1600BD7F78 /* ForItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForItemIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +133,7 @@
 		2679CE80240C0A5A00BD7F78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2679CE81240C0A5A00BD7F78 /* User.swift */,
+				2679CE81240C0A5A00BD7F78 /* Poem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 			files = (
 				2679CE57240C06F500BD7F78 /* ViewController.swift in Sources */,
 				2679CE55240C06F500BD7F78 /* AppDelegate.swift in Sources */,
-				2679CE82240C0A5A00BD7F78 /* User.swift in Sources */,
+				2679CE82240C0A5A00BD7F78 /* Poem.swift in Sources */,
 				2679CE85240C0C1600BD7F78 /* ForItemIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
