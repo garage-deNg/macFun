@@ -26,6 +26,7 @@ class ViewController: NSViewController {
     lazy var tableView: NSTableView = {
         let tb = NSTableView(frame: .zero)
         tb.rowSizeStyle = .large
+        tb.allowsColumnSelection = true
         tb.backgroundColor = .clear
         tb.delegate = self
         tb.dataSource = self
@@ -86,7 +87,7 @@ class ViewController: NSViewController {
 
 
 
-extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
+extension ViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
         return items.count
     }
@@ -105,11 +106,34 @@ extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
         return view
     }
     
+    
+}
+    
+    
+extension ViewController: NSTableViewDelegate {
+    
+    
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
         return heightOfRow
     }
     
     func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
         return true
+    }
+    
+    
+    func tableView(_ tableView: NSTableView, didClick tableColumn: NSTableColumn) {
+        print("点击了 \(tableColumn)")
+    }
+    
+    
+    
+    func tableView(_ tableView: NSTableView, rowActionsForRow row: Int, edge: NSTableView.RowActionEdge) -> [NSTableViewRowAction] {
+        let rm = NSTableViewRowAction(style: NSTableViewRowAction.Style.destructive, title: "删", handler: { (action, idx) in
+            
+            
+            
+                                      })
+        return [rm ]
     }
 }
